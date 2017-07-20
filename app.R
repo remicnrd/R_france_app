@@ -1,7 +1,7 @@
 #-----------------------------------------------------------------------------------------------------------------------------------------------------------
 # PARAMETERS
 AIRPORTS_DATA = "./airports.csv"
-MAPBOX_TOKEN = 'pk.eyJ1IjoiYWRvcHUiLCJhIjoiY2ozYWUycGRqMDAzdzMxbzdxcGtkYzM2cyJ9.F49LI0ZGRQC1to_MYA1jNA'
+MAPBOX_TOKEN = "your_token"
 AIRPORTS_COLOR = "white"
 INCOMING_FLIGHTS = "mediumblue"
 OUTCOMING_FLIGHTS = "deepskyblue"
@@ -157,7 +157,7 @@ server = function(input, output) {
           lat = ~latitude,
           mode = "markers",
           marker = list(color = AIRPORTS_COLOR),
-          opacity = 0.5,
+          opacity = 0.7,
           size = ~count
         ) %>%
         add_segments( 
@@ -169,7 +169,7 @@ server = function(input, output) {
           hoverinfo = "text",
           text = ~`N° de vol`,
           line = list(color = INCOMING_FLIGHTS),
-          opacity = 0.3
+          opacity = 0.5
         ) %>%
         add_segments( 
           name = "Flights from France",
@@ -180,7 +180,7 @@ server = function(input, output) {
           hoverinfo = "text",
           text = ~`N° de vol`,
           line = list(color = OUTCOMING_FLIGHTS),
-          opacity = 0.3
+          opacity = 0.5
         ) %>%
         add_segments( 
           name = "Corsican Flights",
@@ -191,7 +191,7 @@ server = function(input, output) {
           hoverinfo = "text",
           text = ~`N° de vol`,
           line = list(color = CORSICAN_FLIGHTS),
-          opacity = 0.3
+          opacity = 0.5
         )
     })
   } else {
@@ -210,6 +210,7 @@ server = function(input, output) {
                              y = 0.1),
                margin = list(l = 25, r = 25,
                              t = 80, b = 80)) %>%
+        
         add_trace(
           name = "Airports",
           hoverinfo = 'text',
@@ -219,7 +220,7 @@ server = function(input, output) {
           lat = ~latitude,
           mode = "markers",
           marker = list(color = AIRPORTS_COLOR),
-          opacity = 0.5,
+          opacity = 0.7,
           size = ~count
         ) %>%
         add_segments( 
@@ -231,7 +232,7 @@ server = function(input, output) {
           hoverinfo = "text",
           text = ~`N° de vol`,
           line = list(color = INCOMING_FLIGHTS),
-          opacity = 0.3
+          opacity = 0.5
         ) %>%
         add_segments( 
           name = "Flights from France",
@@ -242,7 +243,7 @@ server = function(input, output) {
           hoverinfo = "text",
           text = ~`N° de vol`,
           line = list(color = OUTCOMING_FLIGHTS),
-          opacity = 0.3
+          opacity = 0.5
         )})
   }
 }
