@@ -35,11 +35,4 @@ Every R script can be turn into a web app using <a href="https://shiny.rstudio.c
 Now you don't necessarily have to structure your app in several files. However the R code has to be separated in a UI and Server part.
 
 Concerning hosting environment there is a possibility to use shiny provided services, or to dockerize the app and deploy it elsewhere.
-I've done both and any solution can be good depending on your needs. More info on <a href="https://kravdata.com/">my website</a> soon !
-
-
-
-
-
-
-
+I've done both and any solution can be good depending on your needs.
