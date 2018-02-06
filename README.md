@@ -21,9 +21,7 @@ Then, each IACO must be paired with its coordinates. I imported those from a mon
 I then added a new dimension to my concerned airports list with the count of departure from and arrival to them. This is the used dimension for the size of the markers on the map.
 
 Finally, I created a boolean variable indicating if a flight is an incoming or outcoming french flight to take a look at the two flows.
-Yeah, I also decided to isolate the Corsican flights for fun, and because that's where I'm from.
 
-¯\_(ツ)_/¯
 
 ## Dataviz
 The map is in fact a <a href="https://www.mapbox.com/">Mapbox</a>, using <a href="https://plot.ly/">Plotly</a>.
